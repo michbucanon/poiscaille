@@ -37,6 +37,40 @@
 #define IR_F3   22
 #define IR_F4   23
 
+// Here's the chébran controller
+//
+//#define IR_ADD  65280
+//
+//#define IR_A1   5
+//#define IR_A2   4
+//#define IR_A3   6
+//#define IR_A4   7
+//
+//#define IR_B1   9
+//#define IR_B2   8
+//#define IR_B3   10
+//#define IR_B4   11
+//
+//#define IR_C1   13
+//#define IR_C2   12
+//#define IR_C3   14
+//#define IR_C4   15
+//
+//#define IR_D1   21
+//#define IR_D2   20
+//#define IR_D3   22
+//#define IR_D4   23
+//
+//#define IR_E1   25
+//#define IR_E2   24
+//#define IR_E3   26
+//#define IR_E4   27
+//
+//#define IR_F1   17
+//#define IR_F2   16
+//#define IR_F3   18
+//#define IR_F4   19
+
 
 
 

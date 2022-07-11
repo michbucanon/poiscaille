@@ -5,7 +5,7 @@
         bright1 = 0,
         bright2 = 0;
 
-void firewide() {         
+void firewide() {         //10
 
   uint8_t vit = 600/thisdelay;
 
@@ -26,13 +26,14 @@ void firewide() {
 
 
 
-  for (int i = 0; i < 8; i++) {
-    showLed(i, 2, beatsin8(vit,0,255)+10*i, bright0);
+  for (int i = 0; i < 12; i++) {
+    showLed(i, 0, beatsin8(vit,0,255)+10*i, bright0);
     showLed(i, 1, beatsin8(vit,0,255,vit/2)+10*i, bright1);
-    showLed(i, 0, beatsin8(vit,0,255,vit)+10*i, bright2);
-    showLed(i, 5, beatsin8(vit,0,255)+10*i, bright0);
+    showLed(i, 2, beatsin8(vit,0,255,vit)+10*i, bright2);
+    showLed(i, 3, beatsin8(vit,0,255)+10*i, bright0);
     showLed(i, 4, beatsin8(vit,0,255,vit/2)+10*i, bright1);
-    showLed(i, 3, beatsin8(vit,0,255,vit)+10*i, bright2);
+    showLed(i, 5, beatsin8(vit,0,255,vit)+10*i, bright2);
+    showLed(i, 5, beatsin8(vit,0,255,vit*2)+10*i, bright0);
 
   }
 

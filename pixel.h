@@ -3,19 +3,25 @@
 
 void pixel() {
 
-// Local definitions
+  // Local definitions
 
-// Persistent local variables
+  // Persistent local variables
   static uint16_t currLED;                                                      // Persistent local value to count the current LED location.
 
-// Temporary local variables
+  // Temporary local variables
 
 
-  currLED = (currLED+1)	% (NUM_LEDS);                                           // Cycle through all the LED's. By Andrew Tuline.
+  currLED = (currLED + 1)	% (NUM_LEDS);                                         // Cycle through all the LED's. By Andrew Tuline.
 
   CRGB newcolour = ColorFromPalette(currentPalette, sin8(sample), sample, currentBlending);   // Colour of the LED will be based on the sample, while brightness is based on sampleavg.
   nblend(leds[currLED], newcolour, 192);                                        // Blend the old value and the new value for a gradual transitioning.
 
-} // pixel()
+  if (samplepeak) {                                                               // Trigger a blackout with a peak.
+
+    samplepeak = 0;                                                               // Got a peak, now reset it.
+    fadeToBlackBy(leds, NUM_LEDS, 128);
+  }
+
+  } // pixel()
 
 #endif

@@ -25,8 +25,8 @@ void ripple() {                                                                 
   switch (step) {
 
     case -1:                                                                    // Initialize ripple variables. By Andrew Tuline.
-      centerx = random(8);
-      centery = random(5);
+      centerx = random(12);
+      centery = random(7);
       colour = (sample) % 255;                                                  // More peaks/s = higher the hue colour.
       step = 0;
       break;
@@ -44,8 +44,8 @@ void ripple() {                                                                 
 
       //leds[matrice[(centerx + step + 7) % 7][centery]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern up the strand.
       //leds[matrice[(centerx - step + 7) % 7][centery]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern down the strand.
-      leds[matrice[centery][(centerx + step + 8) % 8]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern up the strand.
-      leds[matrice[centery][(centerx - step + 8) % 8]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern down the strand.
+      leds[matrice[centery][(centerx + step + 5) % 12]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern up the strand.
+      leds[matrice[centery][(centerx - step + 5) % 12]] += ColorFromPalette(currentPalette, colour+millis(), 255/step*2, currentBlending);  // A spreading and fading pattern down the strand.
       leds[matrice[(centery+1)%7][(centerx + step + 5) % 7]] += ColorFromPalette(currentPalette, colour+millis()-75, 64/step*2, currentBlending);  // A spreading and fading pattern up the strand.
       leds[matrice[(centery+1)%7][(centerx - step - 5) % 7]] += ColorFromPalette(currentPalette, colour+millis()-75, 64/step*2, currentBlending);  // A spreading and fading pattern down the strand.
       leds[matrice[(centery-1)%7][(centerx + step + 5) % 7]] += ColorFromPalette(currentPalette, colour+millis()+75, 64/step*2, currentBlending);  // A spreading and fading pattern up the strand.

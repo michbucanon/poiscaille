@@ -1,7 +1,7 @@
 #ifndef MYVUMETER_H
 #define MYVUMETER_H
 
-void myvumeter() {                                                        // A vu meter. Grabbed the falling LED from Reko MeriÃ¶.
+void myvumeter() {        //   8                                                // A vu meter. Grabbed the falling LED from Reko MeriÃ¶.
 
 // Local definitions
   #define GRAVITY 2

@@ -1,7 +1,7 @@
 #ifndef JUGGLEP_H
 #define JUGGLEP_H
 
-void jugglep() {                                                                // Use the juggle routine, but adjust the timebase based on sampleavg for some randomness.
+void jugglep() {     //  9                                                           // Use the juggle routine, but adjust the timebase based on sampleavg for some randomness.
 
 // Local definitions
 

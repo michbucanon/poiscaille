@@ -54,13 +54,13 @@ void lineit() {                                                                 
 
 void waveit() {                                                                 // Shifting pixels from the center to the left and right. Bidouillé pour coller vu qu'on est pas en linéaire.
 
-    for (int i = 15; i > 8; i--) {                           // Move to the right la première ligne.
+    for (int i = 8; i > 3; i--) {                           // Move to the right la première ligne.
       leds[i] = leds[i - 1];
     }
-    for (int i = 31; i > 24; i--) {                           // Move to the right la deuxième.
+    for (int i = 27; i > 18; i--) {                           // Move to the right la deuxième.
       leds[i] = leds[i - 1];
     }
-    for (int i = 47; i > 40; i--) {                          // Move to the right la troisième.
+    for (int i = 49; i > 38; i--) {                          // Move to the right la troisième.
       leds[i] = leds[i - 1];
     }
   
@@ -68,21 +68,23 @@ void waveit() {                                                                 
     for (int i = 0; i < 8; i++) {                                      // Move to the left1.
       leds[i] = leds[i + 1];
     }
-    for (int i = 16; i < 24; i++) {                                     // Move to the left2.
+    for (int i = 17; i < 27; i++) {                                     // Move to the left2.
       leds[i] = leds[i + 1];
     }
-    for (int i = 32; i < 40; i++) {                                      // Move to the left3.
+    for (int i = 50; i < 60; i++) {                                      // Move to the left3.
       leds[i] = leds[i + 1];
     }
 
-//  for (int j = 0; j < 6; j++) {                                           //tentative de faire mieux pour 6 lignes, pas très convaincant.
-//    for (int i = 7; i > -1; i--) {
-//      leds [matrice[i][j]] = leds [matrice[i - 1][j]];
+//  for (int j = 0; j < 7; j++) {                                             //waveit artisanal
+//
+//    for (int i = 6; i > 0; i--) {
+//      leds[matrice[j][i]] = leds[matrice[j][i - 1]];
 //    }
-//    for (int i = 0; i > 7; i++) {
-//      leds [matrice[i][j]] = leds [matrice[i + 1][j]];
+//    for (int i = 0; i < 6; i++) {
+//      leds[matrice[j][i]] = leds[matrice[j][i + 1]];
+//
 //    }
-//  }
+//  };       
 
 
 } // waveit()
@@ -102,13 +104,14 @@ void showColumn(int x, unsigned int coord, unsigned int bright) {
   showLed(x, 3, coord, bright);
   showLed(x, 4, coord, bright);
   showLed(x, 5, coord, bright);
+  showLed(x, 6, coord, bright);
 }
 
 
 void waveitligne() {
 
-  for (int j = 0; j < 8; j++) {
-    for (int i = 1; i < 6; i++) {
+  for (int j = 0; j < 9; j++) {
+    for (int i = 1; i < 7; i++) {
       leds[matrice[i][j]] = leds[matrice[i - 1][j]];
     }
   }
@@ -117,8 +120,8 @@ void waveitligne() {
 
 void waveitcol() {
 
-  for (int j = 1; j < 8; j++) {
-    for (int i = 0; i < 6; i++) {
+  for (int j = 1; j < 9; j++) {
+    for (int i = 0; i < 7; i++) {
       leds[matrice[i][j]] = leds[matrice[i ][j-1]];
     }
   }

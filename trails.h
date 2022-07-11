@@ -5,7 +5,7 @@
  *  Adapted from Reko Merio.
  */
 
-void trails() {                                         // Spawns trails that move
+void trails() {                                //11         // Spawns trails that move
 
 // Local definitions
 

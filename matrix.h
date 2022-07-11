@@ -1,7 +1,7 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-void matrix() {                                                  // A 'Matrix' like display using sampleavg for brightness.
+void matrix() {                                     //14             // A 'Matrix' like display using sampleavg for brightness.
 
 // Local definitions
 
@@ -19,13 +19,14 @@ static uint8_t thishue = 0;
   }
 
   if (thisdir == 1) {
-     for (int i = 8; i > 0; i--) {
+     for (int i = 12; i > 0; i--) {
     leds[matrice[0][i]] = leds[matrice[0][i-1]];
     leds[matrice[1][i]] = leds[matrice[1][i-1]];
     leds[matrice[2][i]] = leds[matrice[2][i-1]];
-    leds[matrice[3][i]] = leds[matrice[0][i-1]];
-    leds[matrice[4][i]] = leds[matrice[1][i-1]];
+    leds[matrice[3][i]] = leds[matrice[2][i-1]];
+    leds[matrice[4][i]] = leds[matrice[2][i-1]];
     leds[matrice[5][i]] = leds[matrice[2][i-1]];
+    leds[matrice[6][i]] = leds[matrice[2][i-1]];
   } }else {
     for (int i = 0; i < NUM_LEDS-1 ; i++ ) leds[i] = leds[i+1];
   }
